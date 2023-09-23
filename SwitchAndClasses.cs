@@ -34,27 +34,26 @@ public class SwitchAndClasses
         foreach(var a in animals)
         {
             string Message=String.Empty;
-            switch(a)
+            Message = a switch
             {
-                case Cat wildCat when wildCat.Wild == true:
-                    Message = $"{wildCat.Name.ToUpper()}, is a wild cat!!";
-                    break;
-                case Cat normalCat when normalCat.Wild == false:
-                    Message = $"{normalCat.Name.ToUpper()} is not a wild cat, you can pet the cat";
-                    break;
-                case Dog isStrong when isStrong.Strong == true:
-                    Message = $"{isStrong.Name.ToUpper()} is a {isStrong.Breed.ToUpper()} breed! hold on firm the leash!";
-                    break;
-                case Dog isNotStrong when isNotStrong.Strong == false:
-                    Message = $"{isNotStrong.Name.ToUpper()} is just a \"{isNotStrong.Breed.ToUpper()}\" breed dont worry!";
-                    break;
-                case null:
-                    WriteLine("This is a null reference, there is no values here");
-                    break;
-                default:
-                    WriteLine("In this example this option will never be used");
-                    break;
-            }
+                Cat wildCat when wildCat.Wild == true
+                    => Message = $"{wildCat.Name.ToUpper()}, is a wild cat!!",
+                
+                Cat normalCat when normalCat.Wild == false
+                    => Message = $"{normalCat.Name.ToUpper()} is not a wild cat, you can pet the cat",
+
+                Dog isStrong when isStrong.Strong == true
+                    => Message = $"{isStrong.Name.ToUpper()} is a {isStrong.Breed.ToUpper()} breed! hold on firm the leash!",
+                
+                Dog isNotStrong when isNotStrong.Strong == false
+                    =>Message = $"{isNotStrong.Name.ToUpper()} is just a \"{isNotStrong.Breed.ToUpper()}\" breed dont worry!",
+                
+                null
+                    => ("This is a null reference, there is no values here"),
+                
+                _
+                    =>("In this example this option will never be used")
+            };
             WriteLine(Message);
         }
 
