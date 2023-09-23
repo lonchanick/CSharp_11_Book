@@ -51,7 +51,7 @@ public class SwitchAndClasses
                 null
                     => ("This is a null reference, there is no values here"),
                 
-                _
+                _ //representa cualquier cosa
                     =>("In this example this option will never be used")
             };
             WriteLine(Message);

@@ -134,5 +134,23 @@ WriteLine("Google has {0:N0} bytes",response.Content.Headers.ContentLength);*/
 /*using static SubjectsByNameSpace.sizeOfVariableTypes.exe;
 VariableTypeSize();*/
 
-using CSharp_11_Book;
-SwitchAndClasses.exe();
+/*using CSharp_11_Book;
+SwitchAndClasses.exe();*/
+
+//foreach comprehensive
+/*using System.Collections;
+
+int[] list = { 8,6,32,47,265 };
+IEnumerator e = list.GetEnumerator();
+while(e.MoveNext())
+{
+    WriteLine($"Number: {e.Current}");
+}*/
+
+
+//using SubjectsByNameSpace.Arrays;
+//Arrays.PatternMatching();
+//Arrays.BidimencionalArray();
+//Arrays.jaggedArray();
+
+
