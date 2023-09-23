@@ -131,4 +131,8 @@ WriteLine("Google has {0:N0} bytes",response.Content.Headers.ContentLength);*/
 */
 
 //extra bonus excercice
-SubjectsByNameSpace.sizeOfVariableTypes.exe.VariableTypeSize();
+/*using static SubjectsByNameSpace.sizeOfVariableTypes.exe;
+VariableTypeSize();*/
+
+using CSharp_11_Book;
+SwitchAndClasses.exe();
