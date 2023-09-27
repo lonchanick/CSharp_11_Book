@@ -159,5 +159,56 @@
         }
     }
 
+    namespace TryCatch
+    {
+        public class tryCatch
+        {
+            public static void exe()
+            {
+                /*WriteLine("What's your age?");
+                var x = ReadLine()!;
+                try
+                {
+                    *//*if(int.TryParse(x, out int age))
+                    {
+                        Write("Your age is {0}", age);
+                    }*//*
+                    var r = int.Parse(x);
+                    Write("Your age is {0}", r);
+                }
+                catch (OverflowException)
+                {
+                    Write("Input either too long or to small");
+                }
+                catch (FormatException)
+                {
+                    Write("Wrong format");
+                }
+                catch (Exception ex)
+                {
+                    Write($"{ex.GetType()} <says> {ex.Message}");
+                }*/
+
+                WriteLine("Enter an amount of money!");
+                string aux = ReadLine()!;
+                if (string.IsNullOrEmpty(aux)) return;
+                try
+                {
+                    decimal amount = decimal.Parse(aux);
+                    WriteLine($"This is the amount formated as money {amount:C}");
+                }
+                catch (FormatException) when (aux.Contains('$'))
+                {
+                    WriteLine("Error: Dollar sign founded");
+                }
+                catch (FormatException) 
+                {
+                    WriteLine("Format error");
+                }
+
+            }
+        }
+    }
+
 
 }

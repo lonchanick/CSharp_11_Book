@@ -153,4 +153,34 @@ while(e.MoveNext())
 //Arrays.BidimencionalArray();
 //Arrays.jaggedArray();
 
+//long x=1231312312312;
+//WriteLine($"{x.GetType()} | {x.ToString().GetType()}");
 
+
+
+//byte array
+//using System;
+//byte[] arr = new byte[128];
+//Random.Shared.NextBytes(arr);
+
+//for(int f=0; f<arr.Length; f++)
+//{
+//    Write($"{Convert.ToString(arr[f],2)} => {arr[f]}"+"\n");
+//}
+
+//using SubjectsByNameSpace.TryCatch;
+//tryCatch.exe();
+
+//WriteLine(Byte.MaxValue);
+
+
+
+
+
+DoSomething(7, "Parametro es lo que se espesifica en la funcion");
+DoSomething(namedString:"Y argumento es lo que se le pasa a la funcion");
+
+void DoSomething(int n=0, string namedString ="default")
+{
+    WriteLine(n + " "+ namedString);
+}
