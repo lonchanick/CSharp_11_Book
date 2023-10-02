@@ -20,6 +20,11 @@ class Cat : Animal
 
 public class SwitchAndClasses
 {
+    /// <summary>
+    /// esto define varios tipos de animales para luego usar
+    /// switch expressions para determinar sus propiedades
+    /// dependiendo del caso :0 (xml comments!)
+    /// </summary>
     public static void exe()
     {
         Animal?[] animals = new Animal[]

@@ -177,10 +177,103 @@ while(e.MoveNext())
 
 
 
-DoSomething(7, "Parametro es lo que se espesifica en la funcion");
+/*DoSomething(7, "Parametro es lo que se espesifica en la funcion");
 DoSomething(namedString:"Y argumento es lo que se le pasa a la funcion");
 
 void DoSomething(int n=0, string namedString ="default")
 {
     WriteLine(n + " "+ namedString);
-}
+}*/
+
+
+/*using CSharp_11_Book;
+//XML comments
+SwitchAndClasses.exe();*/
+
+//lambda => imperative and funtional
+//diferences between:
+//  imperative and declarative -> function implementation!!!
+
+
+//WriteLine(doSomething(1));
+
+/*WriteLine("beggining");
+
+float r = 2.2f + 2.22f;
+
+r = --r;
+WriteLine(r);
+WriteLine("middle point");
+
+
+
+WriteLine("end point");
+var r2 = r / 2;
+WriteLine("<>");
+WriteLine("<>");
+WriteLine("<>");
+
+Lorem();
+
+WriteLine("<>");
+WriteLine("<>");
+WriteLine("<>");
+
+WriteLine("end point");
+
+
+void Lorem()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        WriteLine("Hola {0}", i);
+    }
+}*/
+
+
+/*
+    LOGGS 
+ */
+
+/*using System.Diagnostics;
+
+Debug.WriteLine("Hola primer mensaje");
+Trace.WriteLine("Hola Segundo mensaje");
+
+string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "log.txt");
+//Debug.WriteLine(path);
+TextWriterTraceListener log = new(File.CreateText(path));
+Trace.Listeners.Add(log);
+
+Trace.AutoFlush = true;
+Trace.WriteLine("Hola");
+Trace.WriteLine("vengo del log!");*/
+/*
+using Microsoft.Extensions.Configuration;
+using System.Diagnostics;
+
+WriteLine("Reading from appsettings.json {0}",Directory.GetCurrentDirectory());
+
+ConfigurationBuilder builder = new();
+
+builder.SetBasePath(Directory.GetCurrentDirectory());
+builder.AddJsonFile("appsettings.json",optional: true, reloadOnChange: true);
+
+IConfigurationRoot configuration = builder.Build();
+
+TraceSwitch ts = new TraceSwitch(
+    displayName: "PacktSwitch",
+    description: "This switch is set via a JSON config.");
+
+configuration.GetSection("PacktSwitch").Bind(ts);
+
+Trace.WriteLineIf(ts.TraceError, "Trace error");
+Trace.WriteLineIf(ts.TraceWarning, "Trace Warning");
+Trace.WriteLineIf(ts.TraceInfo, "Trace Info");
+//Trace.WriteLineIf(ts.TraceVerbose, "Trace Verbose");
+
+Console.ReadLine();*/
+
+var x = Environment.SpecialFolder.DesktopDirectory;
+var r = Environment.GetFolderPath(x);
+WriteLine(r);
