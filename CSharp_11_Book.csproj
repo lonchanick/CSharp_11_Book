@@ -15,6 +15,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorLib\CalculatorLib.csproj" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<Using Include="System.Console" Static="true"></Using>
 	</ItemGroup>

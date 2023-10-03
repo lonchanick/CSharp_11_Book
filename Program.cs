@@ -274,6 +274,68 @@ Trace.WriteLineIf(ts.TraceInfo, "Trace Info");
 
 Console.ReadLine();*/
 
-var x = Environment.SpecialFolder.DesktopDirectory;
+/*var x = Environment.SpecialFolder.DesktopDirectory;
 var r = Environment.GetFolderPath(x);
-WriteLine(r);
+WriteLine(r);*/
+
+
+
+
+///<subject>
+///Unit testing
+///page 183
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+///<subject>
+///Exceptions
+///page 193
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+
+/*using CalculatorLib;
+using System.Threading;
+*/
+//try { fun1(); }
+//catch (Exception ex)
+//{
+//    WriteLine(ex.Message);
+//}
+/*
+fun1();
+WriteLine("Hola mundo");
+
+void withDraw(string accountName, double amount)
+{
+    *//*if(accountName is null)
+    {
+        throw new Exception(message:"Error gilipolla");
+    }*//*
+    ArgumentNullException.ThrowIfNull(accountName);
+
+}
+
+void fun1()
+{
+    fun2();
+}
+void fun2()
+{
+    try 
+    { 
+        Calculator.divideByZero(1);
+    }catch
+    {
+        throw; //this include more info
+        //throw new Exception(); //this trim the info that come from the exception generated at divideByZero(1) function
+    }
+}*/
+
+///<subject>
+///Chapter 5 POO : Creating ut own objects
+///page 200
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+
