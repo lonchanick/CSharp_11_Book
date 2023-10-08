@@ -281,18 +281,6 @@ WriteLine(r);*/
 
 
 
-///<subject>
-///Unit testing
-///page 183
-///book CSharp 11 and .NET 7
-/// </subject>
-/// 
-///<subject>
-///Exceptions
-///page 193
-///book CSharp 11 and .NET 7
-/// </subject>
-/// 
 
 /*using CalculatorLib;
 using System.Threading;
@@ -332,10 +320,103 @@ void fun2()
     }
 }*/
 
+
+
+
+///<subject>
+///Unit testing
+///page 183
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+///<subject>
+///Exceptions
+///page 193
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
 ///<subject>
 ///Chapter 5 POO : Creating ut own objects
 ///page 200
 ///book CSharp 11 and .NET 7
 /// </subject>
 /// 
+///<subject>
+///Chapter 5 POO : ENUMS multiple values
+///page 212
+///book CSharp 11 and .NET 7
+/// </subject>
+/// <seealso cref="https://www.youtube.com/watch?v=Pp7T-O3dIrs&ab_channel=CodingTutorials"/>
+/// 
+//using CSharp_11_Book;
 
+//EnumsMultipleValues.exe();
+
+///<subject>
+///Chapter # POO : Tuples
+///page 220
+/// </subject>
+/// 
+
+(string hola, int mundo) friut = getFriut();
+
+WriteLine("Tuple content: item1: {0} item2: {1}", friut.hola, friut.mundo);
+
+(string hola, int mundo) = getFriut();
+
+WriteLine("Tuple content: hola: {0} mundo: {1}", hola, mundo);
+
+
+WriteLine("\n\tDeconstructing tuple value");
+(string stringDeconstructed, int intDeconstructed) = friut;
+WriteLine("First value deconstructed: {0}\nSecond Value deconstructed: {1}", stringDeconstructed, intDeconstructed);
+
+WriteLine("\n\tDeconstructing objecs into tuples");
+//(string papa, string mama) = new Person();
+var bob = new Person { hermano1="Pepe"/*, hermano2="Clavo"*/};
+var (papa, mama) = bob;
+
+WriteLine("{0} <> {1}",papa, mama);
+
+var (papax, mamax, numDeHermanos) = bob;
+
+WriteLine("Papa: {0} <> Mama: {1} <> Num de hermanos: {2}", papax, mamax, numDeHermanos);
+
+(string, int) getFriut()
+{
+    return ("Apples", 20);
+}
+
+public class Person
+{
+    public string papa { get; set; } = "Default-pa";
+    public string mama { get; set; } = "Default-ma";
+    public string hermano1 { get; set; } = "none";
+    public string hermano2 { get; set; } = "none";
+
+    public int numeroDeHermanos {
+        get {
+            int count = 0;
+            if (!hermano1.Equals("none"))
+                count++;
+            if (!hermano2.Equals("none"))
+                count++;
+
+            return count;
+        }
+        //set { } 
+    }
+
+    public void Deconstruct(out string? papa, out string? mama)
+    {
+        papa = this.papa;
+        mama = this.mama;
+    }
+    public void Deconstruct(out string? papa, out string? mama, out int numDeHermanos)
+    {
+        papa = this.papa;
+        mama = this.mama;
+        numDeHermanos = this.numeroDeHermanos;
+    }
+
+}
