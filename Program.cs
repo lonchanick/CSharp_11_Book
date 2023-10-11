@@ -358,6 +358,7 @@ void fun2()
 /// </subject>
 /// 
 
+/*
 (string hola, int mundo) friut = getFriut();
 
 WriteLine("Tuple content: item1: {0} item2: {1}", friut.hola, friut.mundo);
@@ -373,7 +374,7 @@ WriteLine("First value deconstructed: {0}\nSecond Value deconstructed: {1}", str
 
 WriteLine("\n\tDeconstructing objecs into tuples");
 //(string papa, string mama) = new Person();
-var bob = new Person { hermano1="Pepe"/*, hermano2="Clavo"*/};
+var bob = new Person { hermano1="Pepe"*//*, hermano2="Clavo"*//*};
 var (papa, mama) = bob;
 
 WriteLine("{0} <> {1}",papa, mama);
@@ -419,4 +420,15 @@ public class Person
         numDeHermanos = this.numeroDeHermanos;
     }
 
+}*/
+
+
+int a = 10;
+method(ref a);
+
+WriteLine(a);
+
+void method(ref int a)
+{
+    a++;
 }
