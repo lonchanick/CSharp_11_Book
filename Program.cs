@@ -423,7 +423,7 @@ public class Person
 }*/
 
 
-int a = 10;
+/*int a = 10;
 method(ref a);
 
 WriteLine(a);
@@ -431,4 +431,4 @@ WriteLine(a);
 void method(ref int a)
 {
     a++;
-}
+}*/
