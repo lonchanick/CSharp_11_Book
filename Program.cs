@@ -323,40 +323,10 @@ void fun2()
 
 
 
-///<subject>
-///Unit testing
-///page 183
-///book CSharp 11 and .NET 7
-/// </subject>
-/// 
-///<subject>
-///Exceptions
-///page 193
-///book CSharp 11 and .NET 7
-/// </subject>
-/// 
-///<subject>
-///Chapter 5 POO : Creating ut own objects
-///page 200
-///book CSharp 11 and .NET 7
-/// </subject>
-/// 
-///<subject>
-///Chapter 5 POO : ENUMS multiple values
-///page 212
-///book CSharp 11 and .NET 7
-/// </subject>
-/// <seealso cref="https://www.youtube.com/watch?v=Pp7T-O3dIrs&ab_channel=CodingTutorials"/>
-/// 
 //using CSharp_11_Book;
 
 //EnumsMultipleValues.exe();
 
-///<subject>
-///Chapter # POO : Tuples
-///page 220
-/// </subject>
-/// 
 
 /*
 (string hola, int mundo) friut = getFriut();
@@ -423,12 +393,111 @@ public class Person
 }*/
 
 
-/*int a = 10;
-method(ref a);
 
-WriteLine(a);
+/*
+using CSharp_11_Book;
+var x = new BookSerie();*/
 
-void method(ref int a)
+/*foreach(var colection in x.Books )
 {
-    a++;
+    WriteLine(colection.Key);
+    WriteLine(colection.Value.ToString("\t"));
 }*/
+
+/*WriteLine(x);
+WriteLine("Todoe n orde");
+return;*/
+
+/*for(int f=0; f<x.count();f++)
+{
+    WriteLine(x[f]);
+}*/
+
+//WriteLine(x[0].ToString("\t"));
+//var f = x["Second Collection"][0];
+//WriteLine(f);
+
+
+
+///<subject>
+///Unit testing
+///page 183
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+///<subject>
+///Exceptions
+///page 193
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+///<subject>
+///Chapter 5 POO : Creating ut own objects
+///page 200
+///book CSharp 11 and .NET 7
+/// </subject>
+/// 
+///<subject>
+///Chapter 5 POO : ENUMS multiple values
+///page 212
+///book CSharp 11 and .NET 7
+/// </subject>
+/// <seealso cref="https://www.youtube.com/watch?v=Pp7T-O3dIrs&ab_channel=CodingTutorials"/>
+/// 
+///<subject>
+///Chapter # POO : Tuples
+///page 220
+/// </subject>
+/// 
+///<summary>
+///Indexers y Extension methods
+/// </summary>
+///<summary>
+///Implementing functionality
+/// </summary>
+/// 
+
+/*
+using PacktLibraryNetStandard2;
+
+Person Diego = new()
+{
+    name = "Diego",
+    city = "Guayaquil",
+    BirthDay = new DateTime(1996,08,10)
+};
+
+Person Dayana = new()
+{
+    name = "Dayana",
+    BirthDay = new DateTime(1990, 10, 08)
+};
+
+Person.Marry(Diego, Dayana);
+Person.Procreate(Diego, Dayana);
+Person.Procreate(Diego, Dayana);
+Person.Procreate(Diego, Dayana);
+
+WriteLine(Diego);WriteLine("\n");
+WriteLine(Dayana);*/
+
+using PacktLibraryNetStandard2;
+//lamech history
+Person lamech = new Person { name = "Lamech" };
+Person Adah= new Person { name = "Adah" };
+Person Zillah = new Person { name = "Zillah" };
+
+//lamech.Marry(Adah);
+if (lamech + Adah)
+    WriteLine("Just married {0} and {1}", lamech.name, Adah.name);
+
+Person.Marry(Zillah, lamech);
+
+var r = Zillah * lamech;
+var r2 = lamech * Adah;
+
+WriteLine(lamech);
+WriteLine(Zillah);
+WriteLine(Adah);
+
+
