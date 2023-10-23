@@ -483,12 +483,12 @@ WriteLine(Dayana);*/
 
 using PacktLibraryNetStandard2;
 //lamech history
-Person lamech = new Person { name = "Lamech" };
+/*Person lamech = new Person { name = "Lamech" };
 Person Adah= new Person { name = "Adah" };
-Person Zillah = new Person { name = "Zillah" };
+Person Zillah = new Person { name = "Zillah" };*/
 
 //lamech.Marry(Adah);
-if (lamech + Adah)
+/*if (lamech + Adah)
     WriteLine("Just married {0} and {1}", lamech.name, Adah.name);
 
 Person.Marry(Zillah, lamech);
@@ -498,6 +498,56 @@ var r2 = lamech * Adah;
 
 WriteLine(lamech);
 WriteLine(Zillah);
-WriteLine(Adah);
+WriteLine(Adah);*/
+
+
+
+//recursivity
+
+/*WriteLine(factorial(5));
+
+int factorial(int num)
+{
+    if (num == 0) return 1;
+    return num * factorial(num-1);
+}
+*/
+
+
+//*******************************************
+//TEMA: Pattern Matching with objects pag:242
+//*******************************************
+
+Passenger[] passengers = {
+    new FirstClassPassenger { Name = "First Class#1", AirMiles=1_777_133 },
+    new FirstClassPassenger { Name = "First Class#2", AirMiles=1_777_132 },
+    new BuisinessClassPassenger { Name = "Buisiness Class#1",  },
+    new CoachClassPassenger {Name="Amit", CarryOnKG=20.25},
+    new CoachClassPassenger {Name="Dave", CarryOnKG=0}
+};
+
+foreach(var passenger in passengers)
+{
+    decimal flightCost = passenger switch
+    {
+        /*FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
+        FirstClassPassenger p when p.AirMiles > 15000 => 1750M,
+        FirstClassPassenger _                         => 2000M,*/
+        FirstClassPassenger p => p.AirMiles switch
+        {
+            >35000 => 1500M,
+            >15000 => 1750M,
+            _      => 2000M
+        },
+        BuisinessClassPassenger _                     => 1000M,
+        CoachClassPassenger p when p.CarryOnKG<10.0   => 500M,
+        CoachClassPassenger _                         => 650M,
+        _                                             => 800M
+    };;
+    WriteLine($"FlightCost: {flightCost:C} for passenger {passenger}");
+}
+
+
+
 
 
