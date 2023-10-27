@@ -517,7 +517,7 @@ int factorial(int num)
 //*******************************************
 //TEMA: Pattern Matching with objects pag:242
 //*******************************************
-
+/*
 Passenger[] passengers = {
     new FirstClassPassenger { Name = "First Class#1", AirMiles=1_777_133 },
     new FirstClassPassenger { Name = "First Class#2", AirMiles=1_777_132 },
@@ -530,9 +530,9 @@ foreach(var passenger in passengers)
 {
     decimal flightCost = passenger switch
     {
-        /*FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
+        *//*FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
         FirstClassPassenger p when p.AirMiles > 15000 => 1750M,
-        FirstClassPassenger _                         => 2000M,*/
+        FirstClassPassenger _                         => 2000M,*//*
         FirstClassPassenger p => p.AirMiles switch
         {
             >35000 => 1500M,
@@ -543,11 +543,19 @@ foreach(var passenger in passengers)
         CoachClassPassenger p when p.CarryOnKG<10.0   => 500M,
         CoachClassPassenger _                         => 650M,
         _                                             => 800M
-    };;
+    };
     WriteLine($"FlightCost: {flightCost:C} for passenger {passenger}");
 }
 
+*/
 
+//propiedades que se inicializan y ya no se pueden modificar
+/*ImmutablePerson Jeff = new()
+{
+    FirstName = "Jeff",
+    LastName = "Bezos"
+};*/
 
+//Jeff.FirstName = "Modifiing"; //error
 
 
